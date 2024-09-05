@@ -1,6 +1,11 @@
 public class Quadrado implements Figuras2D{
 
     double lado;
+
+    public Quadrado(double lado) {
+        this.lado = lado;
+    }
+
     @Override
     public String getTipo() {
         return "Quadrado";
@@ -29,5 +34,13 @@ public class Quadrado implements Figuras2D{
         return "Quadrado{" +
                 "lado=" + lado +
                 '}';
+    }
+
+    public int compareTo(Figuras2D o) {
+        if(this.calculaArea() == o.calculaArea())
+            return 0;
+        if(this.calculaArea() < o.calculaArea())
+            return -1;
+        return 1;
     }
 }

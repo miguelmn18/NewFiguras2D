@@ -1,4 +1,4 @@
-public interface Figuras2D {
+public interface Figuras2D extends Comparable <Figuras2D> {
 
     public String getTipo ();
     public double calculaArea();

@@ -1,6 +1,11 @@
 public class Circulo implements Figuras2D{
 
     double raio;
+
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+
     @Override
     public String getTipo() {
         return "Circulo";
@@ -29,5 +34,12 @@ public class Circulo implements Figuras2D{
         return "Circulo{" +
                 "raio=" + raio +
                 '}';
+    }
+    public int compareTo(Figuras2D o) {
+        if(this.calculaArea() == o.calculaArea())
+            return 0;
+        if(this.calculaArea() < o.calculaArea())
+            return -1;
+        return 1;
     }
 }
