@@ -10,17 +10,17 @@ public class RepositorioFiguras2D {
     public Figuras2D removeFigura (int posicao){
         return figuras.remove(posicao);
     }
-    public Figuras2D getArea (int posicao){
-        figuras.get(posicao);
-        return
+    public double getArea (int posicao){
+        return figuras.get(posicao).calculaArea;
 
     }
 
-    public Figuras2D getPerimetro (int posicao){
+    public double getPerimetro (int posicao){
+        return figuras.get(posicao).calculaPerimetro;
 
     }
 
-    public Figuras2D getTipo (){
-        figuras
+    public double getTipo (int posicao){
+        return figuras.get(posicao).getTipo();
     }
 }
